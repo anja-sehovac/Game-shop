@@ -773,10 +773,16 @@ section{
    background-color: var(--main-color);
 }
 
+.filters{
+   display: flex;
+   justify-content: center;
+}
+
 .filters form{
    background-color: var(--white);
-   box-shadow: var(--box-shodow);
    padding: 2rem;
+   box-shadow: var(--box-shodow);
+   maximum-width: 100rem;
 }
 
 .filters form #close-filter{
@@ -1276,6 +1282,73 @@ section{
 
 }
 
+.cfooter {
+   background-color: var(--black);
+   margin-top: auto;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+   position: fixed;
+}
+
+.cfooter .flex {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   justify-content: space-between;
+}
+
+.cfooter .flex .box {
+   flex: 1 1 30rem;
+}
+
+.cfooter .flex .box a {
+   display: block;
+   padding: 1rem 0;
+   font-size: 1.8rem;
+}
+
+.cfooter .flex .box a span {
+   color: var(--white);
+}
+
+.cfooter .flex .box a i {
+   color: var(--main-color);
+}
+
+.cfooter .flex .box:last-child {
+   text-align: right;
+}
+
+.cfooter .flex .box:last-child a i {
+   margin-left: 1.5rem;
+}
+
+.cfooter .flex .box:first-child a i {
+   margin-right: 1.5rem;
+}
+
+.businessman-image {
+   width: 30%;
+}
+
+.cfooter .flex .box:nth-child(2) {
+   text-align: center;
+}
+
+.cfooter .credit {
+   padding: 3rem 2rem;
+   text-align: center;
+   border-top: var(--border);
+   font-size: 2rem;
+   color: var(--white);
+   margin-top: 2rem;
+}
+
+.cfooter .credit span {
+   color: var(--main-color);
+}
+
 @media (max-width:450px){
 
    html{
@@ -1319,5 +1392,7 @@ section{
    .listings .box-container form .box .thumb{
       height: 20rem;
    }
+
+
 
 }

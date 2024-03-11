@@ -84,113 +84,42 @@
    <form action="" method="post">
       <div id="close-filter"><i class="fas fa-times"></i></div>
       <h3>filter your search</h3>
-         
+
          <div class="flex">
             <div class="box">
-               <p>enter location</p>
-               <input type="text" name="location" required maxlength="50" placeholder="enter ciyt name" class="input">
-            </div>
-            <div class="box">
-               <p>offer type</p>
-               <select name="offer" class="input" required>
-                  <option value="sale">sale</option>
-                  <option value="resale">resale</option>
-                  <option value="rent">rent</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>property type</p>
+               <p>Animal type <span>*</span></p>
                <select name="type" class="input" required>
-                  <option value="flat">flat</option>
-                  <option value="house">house</option>
-                  <option value="shop">shop</option>
+                  <option value="Dog">Dog</option>
+                  <option value="Cat">Cat</option>
+                  <option value="Bird">Bird</option>
+                  <option value="Hamster">Hamster</option>
+                  <option value="Other">Other</option>
                </select>
             </div>
             <div class="box">
-               <p>how many BHK</p>
-               <select name="bhk" class="input" required>
-                  <option value="1">1 BHK</option>
-                  <option value="2">2 BHK</option>
-                  <option value="3">3 BHK</option>
-                  <option value="4">4 BHK</option>
-                  <option value="5">5 BHK</option>
-                  <option value="6">6 BHK</option>
-                  <option value="7">7 BHK</option>
-                  <option value="8">8 BHK</option>
-                  <option value="9">9 BHK</option>
+               <p>Location<span>*</span></p>
+               <select name="location" class="input" required>
+                  <option value="USK">Unsko-sanski kanton</option>
+                  <option value="PK">Posavski kanton</option>
+                  <option value="TK">Tuzlanski kanton</option>
+                  <option value="ZDK">ZeniČko-dobojski kanton</option>
+                  <option value="BPK">Bosansko-podrinjski kanton</option>
+                  <option value="SBK">Srednjobosanski kanton</option>
+                  <option value="HNK">Hercegovačko-neretvanski kanton</option>
+                  <option value="ZHK">Zapadnohercegovački kanton</option>
+                  <option value="KS">Kanton Sarajevo</option>
+                  <option value="K10">Kaonton 10</option>
                </select>
             </div>
             <div class="box">
-               <p>maximum budget</p>
-               <select name="minimum" class="input" required>
-                  <option value="5000000">5 lac</option>
-                  <option value="1000000">10 lac</option>
-                  <option value="2000000">20 lac</option>
-                  <option value="3000000">30 lac</option>
-                  <option value="4000000">40 lac</option>
-                  <option value="4000000">40 lac</option>
-                  <option value="5000000">50 lac</option>
-                  <option value="6000000">60 lac</option>
-                  <option value="7000000">70 lac</option>
-                  <option value="8000000">80 lac</option>
-                  <option value="9000000">90 lac</option>
-                  <option value="10000000">1 Cr</option>
-                  <option value="20000000">2 Cr</option>
-                  <option value="30000000">3 Cr</option>
-                  <option value="40000000">4 Cr</option>
-                  <option value="50000000">5 Cr</option>
-                  <option value="60000000">6 Cr</option>
-                  <option value="70000000">7 Cr</option>
-                  <option value="80000000">8 Cr</option>
-                  <option value="90000000">9 Cr</option>
-                  <option value="100000000">10 Cr</option>
-                  <option value="150000000">15 Cr</option>
-                  <option value="200000000">20 Cr</option>
-               </select>
+               <p>What age <span>*</span></p>
+               <input type="text" name="age" required maxlength="50" placeholder="max age in months" class="input">
             </div>
             <div class="box">
-               <p>maximum budget</p>
-               <select name="maximum" class="input" required>
-                  <option value="5000000">5 lac</option>
-                  <option value="1000000">10 lac</option>
-                  <option value="2000000">20 lac</option>
-                  <option value="3000000">30 lac</option>
-                  <option value="4000000">40 lac</option>
-                  <option value="4000000">40 lac</option>
-                  <option value="5000000">50 lac</option>
-                  <option value="6000000">60 lac</option>
-                  <option value="7000000">70 lac</option>
-                  <option value="8000000">80 lac</option>
-                  <option value="9000000">90 lac</option>
-                  <option value="10000000">1 Cr</option>
-                  <option value="20000000">2 Cr</option>
-                  <option value="30000000">3 Cr</option>
-                  <option value="40000000">4 Cr</option>
-                  <option value="50000000">5 Cr</option>
-                  <option value="60000000">6 Cr</option>
-                  <option value="70000000">7 Cr</option>
-                  <option value="80000000">8 Cr</option>
-                  <option value="90000000">9 Cr</option>
-                  <option value="100000000">10 Cr</option>
-                  <option value="150000000">15 Cr</option>
-                  <option value="200000000">20 Cr</option>
-               </select>
+               <p>Maximum budget <span>*</span></p>
+               <input type="text" name="budget" required maxlength="50" placeholder="max euro" class="input">
             </div>
-            <div class="box">
-               <p>status</p>
-               <select name="status" class="input" required>
-                  <option value="ready to move">ready to move</option>
-                  <option value="under construction">under construction</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>furnished</p>
-               <select name="furnished" class="input" required>
-                  <option value="unfurnished">unfurnished</option>
-                  <option value="furnished">furnished</option>
-                  <option value="semi-furnished">semi-furnished</option>
-               </select>
-            </div>
+
          </div>
          <input type="submit" value="search property" name="search" class="btn">
    </form>
@@ -218,21 +147,21 @@
             </div>
          </div>
          <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>house</span><span>sale</span></p>
+            <p class="total-images"><i class="far fa-image"></i><span>1</span></p>
+
             <form action="" method="post" class="save">
                <button type="submit" name="save" class="far fa-heart"></button>
             </form>
-            <img src="images/house-img-1.webp" alt="">
+            <img src="images/bird1.jpg" alt="">
          </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
+         <h3 class="name">Tuco</h3>
+         <p class="location"><i class="fas fa-paw"></i><span>Budgerigar bird</span></p>
          <div class="flex">
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
+            <p><i class="fas fa-calendar"></i><span>3</span></p>
+            <p><i class="fas fa-money-bill"></i><span>2000</span></p>
+            <p><i class="fas fa-location-dot"></i><span>TK</span></p>
          </div>
-         <a href="view_pet.html" class="btn">view property</a>
+         <a href="view_pet.html" class="btn">view pet</a>
       </div>
 
       <div class="box">
@@ -244,21 +173,21 @@
             </div>
          </div>
          <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>flat</span><span>sale</span></p>
+            <p class="total-images"><i class="far fa-image"></i><span>1</span></p>
+
             <form action="" method="post" class="save">
                <button type="submit" name="save" class="far fa-heart"></button>
             </form>
-            <img src="images/house-img-2.webp" alt="">
+            <img src="images/cat1.webp" alt="">
          </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
+         <h3 class="name">Meow</h3>
+         <p class="location"><i class="fas fa-map-marker-alt"></i><span>Burmese cat</span></p>
          <div class="flex">
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
+            <p><i class="fas fa-calendar"></i><span>2</span></p>
+            <p><i class="fas fa-money-bill"></i><span>1500</span></p>
+            <p><i class="fas fa-location-dot"></i><span>KS</span></p>
          </div>
-         <a href="view_pet.html" class="btn">view property</a>
+         <a href="view_pet.html" class="btn">view pet</a>
       </div>
 
       <div class="box">
@@ -270,24 +199,25 @@
             </div>
          </div>
          <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>4</span></p>
-            <p class="type"><span>flat</span><span>sale</span></p>
+            <p class="total-images"><i class="far fa-image"></i><span>1</span></p>
+
             <form action="" method="post" class="save">
                <button type="submit" name="save" class="far fa-heart"></button>
             </form>
-            <img src="images/house-img-3.jpg" alt="">
+            <img src="images/dog1.webp" alt="">
          </div>
-         <h3 class="name">modern flats and appartments</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>andheri, mumbai, india - 401303</span></p>
+         <h3 class="name">Buddy</h3>
+         <p class="location"><i class="fas fa-map-marker-alt"></i><span>Golden retriever dog</span></p>
          <div class="flex">
-            <p><i class="fas fa-bed"></i><span>3</span></p>
-            <p><i class="fas fa-bath"></i><span>2</span></p>
-            <p><i class="fas fa-maximize"></i><span>750sqft</span></p>
+            <p><i class="fas fa-calendar"></i><span>5</span></p>
+            <p><i class="fas fa-money-bill"></i><span>3000</span></p>
+            <p><i class="fas fa-location-dot"></i><span>KS</span></p>
          </div>
-         <a href="view_pet.html" class="btn">view property</a>
+         <a href="view_pet.html" class="btn">view pet</a>
       </div>
 
    </div>
+
 
 </section>
 
