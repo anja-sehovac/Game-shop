@@ -47,7 +47,6 @@
                <li><a href="#">Sell<i class="fas fa-angle-down"></i></a>
                   <ul>
                      <li><a href="post-pet.html">Post pet</a></li>
-                     <li><a href="dashboard.html">Dashboard</a></li>
                   </ul>
                </li>
                <li><a href="#">Help<i class="fas fa-angle-down"></i></a>
@@ -66,6 +65,7 @@
                <ul>
                   <li><a href="login.html">Log-in</a></li>
                   <li><a href="register.html">Register</a></li>
+                  <li><a href="change_profile.html">Edit Profile</a></li>
                   <li><a href="my_listings.html">My Listings</a></li>
                </ul>
             </li>
@@ -83,10 +83,28 @@
 
    <form action="" method="post">
       <h3>Edit your listing:</h3>
-      <input type="tel" name="name" required maxlength="50" placeholder="Enter pet's name" class="box">
-      <input type="email" name="age" required maxlength="50" placeholder="Enter pet's age" class="box">
-      <input type="location" name="ENter location" required maxlength="20" placeholder="Enter pet's location" class="box">
-      <input type="Enter pet description" name="c_pass" required maxlength="20" placeholder="Description" class="box">
+      <input type="text" name="name" required maxlength="50" placeholder="Enter pet's name" class="box">
+      <input type="number" name="age" required maxlength="50" placeholder="Enter pet's age" class="box">
+      <select name="location" class="input" required>
+         <option value="USK">Unsko-sanski kanton</option>
+         <option value="PK">Posavski kanton</option>
+         <option value="TK">Tuzlanski kanton</option>
+         <option value="ZDK">ZeniČko-dobojski kanton</option>
+         <option value="BPK">Bosansko-podrinjski kanton</option>
+         <option value="SBK">Srednjobosanski kanton</option>
+         <option value="HNK">Hercegovačko-neretvanski kanton</option>
+         <option value="ZHK">Zapadnohercegovački kanton</option>
+         <option value="KS">Kanton Sarajevo</option>
+         <option value="K10">Kaonton 10</option>
+      </select>
+      <select name="type" class="input" required>
+         <option value="Dog">Dog</option>
+         <option value="Cat">Cat</option>
+         <option value="Bird">Bird</option>
+         <option value="Hamster">Hamster</option>
+         <option value="Other">Other</option>
+      </select>
+      <input type="text" name="description" required maxlength="20" placeholder="Description" class="box">
       <div class="box">
          <input type="file" name="image_01" class="input" accept="image/*" required>
       </div>

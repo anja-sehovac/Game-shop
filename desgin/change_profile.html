@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>dashboard</title>
+   <title>Change profile</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -45,7 +45,6 @@
                <li><a href="#">Sell<i class="fas fa-angle-down"></i></a>
                   <ul>
                      <li><a href="post-pet.html">Post pet</a></li>
-                     <li><a href="dashboard.html">Dashboard</a></li>
                   </ul>
                </li>
                <li><a href="#">Help<i class="fas fa-angle-down"></i></a>
@@ -64,6 +63,7 @@
                <ul>
                   <li><a href="login.html">Log-in</a></li>
                   <li><a href="register.html">Register</a></li>
+                  <li><a href="change_profile.html">Edit Profile</a></li>
                   <li><a href="my_listings.html">My Listings</a></li>
                </ul>
             </li>
@@ -73,30 +73,30 @@
 
 </header>
 
-<section class="dashboard">
+<section class="profilechange">
 
-   <h1 class="heading">dashboard</h1>
+   <h1 class="heading">change profile</h1>
 
    <div class="box-container">
 
       <div class="box">
 
       <h3>Name</h3>
-      <p>User A</p>
-      <a href=# class="btn">update name</a>
+      <input type="text" name="name" required maxlength="50" placeholder="Name" class="input">
+      <a href=#  class="btn">update name</a>
       </div>
 
       <div class="box">
 
          <h3>Number</h3>
-         <p>User A</p>
+         <input type="text" name="number" required maxlength="50" placeholder="Number" class="input">
          <a href=# class="btn">update number</a>
       </div>
 
       <div class="box">
 
          <h3>E-mail</h3>
-         <p>User A</p>
+         <input type="email" name="email" required maxlength="50" placeholder="E-mail" class="input">
          <a href=# class="btn">update email</a>
       </div>
 
@@ -114,7 +114,7 @@
 </section>
 
 
-<footer class="footer">
+<footer class="cfooter">
 
    <section class="flex">
 
