@@ -1,4 +1,4 @@
-/*let menu = document.querySelector('.header .menu');
+let menu = document.querySelector('.header .menu');
 
 document.querySelector('#menu-btn').onclick = () =>{
    menu.classList.toggle('active');
@@ -25,4 +25,4 @@ document.querySelectorAll('.faq .box-container .box h3').forEach(headings =>{
    headings.onclick = () =>{
       headings.parentElement.classList.toggle('active');
    }
-});*/
+});
