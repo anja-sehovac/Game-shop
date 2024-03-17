@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>dashboard</title>
+   <title>Update pet</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -14,6 +14,8 @@
 
 </head>
 <body>
+
+<!-- header section starts  -->
 
 <header class="header">
 
@@ -45,7 +47,6 @@
                <li><a href="#">Sell<i class="fas fa-angle-down"></i></a>
                   <ul>
                      <li><a href="post-pet.html">Post pet</a></li>
-                     <li><a href="dashboard.html">Dashboard</a></li>
                   </ul>
                </li>
                <li><a href="#">Help<i class="fas fa-angle-down"></i></a>
@@ -64,6 +65,7 @@
                <ul>
                   <li><a href="login.html">Log-in</a></li>
                   <li><a href="register.html">Register</a></li>
+                  <li><a href="change_profile.html">Edit Profile</a></li>
                   <li><a href="my_listings.html">My Listings</a></li>
                </ul>
             </li>
@@ -73,46 +75,59 @@
 
 </header>
 
-<section class="dashboard">
+<!-- header section ends -->
 
-   <h1 class="heading">dashboard</h1>
+<!-- register section starts  -->
 
-   <div class="box-container">
+<section class="form-container">
 
+   <form action="" method="post">
+      <h3>Edit your listing:</h3>
+      <input type="text" name="name" required maxlength="50" placeholder="Enter pet's name" class="box">
+      <input type="number" name="age" required maxlength="50" placeholder="Enter pet's age" class="box">
+      <select name="location" class="input" required>
+         <option value="USK">Unsko-sanski kanton</option>
+         <option value="PK">Posavski kanton</option>
+         <option value="TK">Tuzlanski kanton</option>
+         <option value="ZDK">ZeniČko-dobojski kanton</option>
+         <option value="BPK">Bosansko-podrinjski kanton</option>
+         <option value="SBK">Srednjobosanski kanton</option>
+         <option value="HNK">Hercegovačko-neretvanski kanton</option>
+         <option value="ZHK">Zapadnohercegovački kanton</option>
+         <option value="KS">Kanton Sarajevo</option>
+         <option value="K10">Kaonton 10</option>
+      </select>
+      <select name="type" class="input" required>
+         <option value="Dog">Dog</option>
+         <option value="Cat">Cat</option>
+         <option value="Bird">Bird</option>
+         <option value="Hamster">Hamster</option>
+         <option value="Other">Other</option>
+      </select>
+      <input type="text" name="description" required maxlength="20" placeholder="Description" class="box">
       <div class="box">
-
-      <h3>Name</h3>
-      <p>User A</p>
-      <a href=# class="btn">update name</a>
+         <input type="file" name="image_01" class="input" accept="image/*" required>
       </div>
+      <input type="submit" value="Post listing" name="submit" class="btn">
 
-      <div class="box">
-
-         <h3>Number</h3>
-         <p>User A</p>
-         <a href=# class="btn">update number</a>
-      </div>
-
-      <div class="box">
-
-         <h3>E-mail</h3>
-         <p>User A</p>
-         <a href=# class="btn">update email</a>
-      </div>
-
-      <div class="image">
-         <img src="images/cat.svg" alt="">
-      </div>
-
-
-
-
-
-
-   </div>
+   </form>
 
 </section>
 
+<!-- register section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
 
 <footer class="footer">
 
@@ -128,30 +143,11 @@
    </section>
 </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<!-- footer section ends -->
 
 
 <!-- custom js file link  -->
-<script src="../project/js/script.js"></script>
-
+<script src="js/script.js"></script>
 
 </body>
 </html>
