@@ -1,0 +1,20 @@
+{
+  "breeds": [
+    {
+      "id": 1,
+      "category": "cat"
+    },
+    {
+      "id": 2,
+      "category": "dog"
+    },
+    {
+      "id": 3,
+      "category": "bird"
+    },
+    {
+      "id": 4,
+      "category": "other",
+    }
+  ]
+}

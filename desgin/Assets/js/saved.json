@@ -1,0 +1,42 @@
+[
+  {
+    "userID": 1,
+    "savedID": 2
+  },
+  {
+    "userID": 2,
+    "savedID": 3
+  },
+  {
+    "userID": 3,
+    "savedID": 4
+  },
+  {
+    "userID": 4,
+    "savedID": 5
+  },
+  {
+    "userID": 5,
+    "savedID": 6
+  },
+  {
+    "userID": 6,
+    "savedID": 7
+  },
+  {
+    "userID": 7,
+    "savedID": 8
+  },
+  {
+    "userID": 8,
+    "savedID": 9
+  },
+  {
+    "userID": 9,
+    "savedID": 10
+  },
+  {
+    "userID": 10,
+    "savedID": 1
+  }
+]
