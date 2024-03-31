@@ -1,0 +1,37 @@
+
+
+<section class="form-container">
+
+   <form action="" method="post">
+      <h3>Edit your listing:</h3>
+      <input type="text" name="name" required maxlength="50" placeholder="Enter pet's name" class="box">
+      <input type="number" name="age" required maxlength="50" placeholder="Enter pet's age" class="box">
+      <select name="location" class="input" required>
+         <option value="USK">Unsko-sanski kanton</option>
+         <option value="PK">Posavski kanton</option>
+         <option value="TK">Tuzlanski kanton</option>
+         <option value="ZDK">ZeniČko-dobojski kanton</option>
+         <option value="BPK">Bosansko-podrinjski kanton</option>
+         <option value="SBK">Srednjobosanski kanton</option>
+         <option value="HNK">Hercegovačko-neretvanski kanton</option>
+         <option value="ZHK">Zapadnohercegovački kanton</option>
+         <option value="KS">Kanton Sarajevo</option>
+         <option value="K10">Kaonton 10</option>
+      </select>
+      <select name="type" class="input" required>
+         <option value="Dog">Dog</option>
+         <option value="Cat">Cat</option>
+         <option value="Bird">Bird</option>
+         <option value="Hamster">Hamster</option>
+         <option value="Other">Other</option>
+      </select>
+      <input type="text" name="description" required maxlength="20" placeholder="Description" class="box">
+      <div class="box">
+         <input type="file" name="image_01" class="input" accept="image/*" required>
+      </div>
+      <input type="submit" value="Post listing" name="submit" class="btn">
+
+   </form>
+
+</section>
+
