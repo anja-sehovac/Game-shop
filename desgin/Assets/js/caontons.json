@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Una-Sana Canton"
+    "name": "Unsko-sanski kanton"
   },
   {
     "id": 2,
-    "name": "Posavina Canton"
+    "name": "Posavski kanton"
   },
   {
     "id": 3,
-    "name": "Tuzla Canton"
+    "name": "Tuzlanski kanton"
   },
   {
     "id": 4,
-    "name": "Zenica-Doboj Canton"
+    "name": "ZeniČko-dobojski kanton"
   },
   {
     "id": 5,
-    "name": "Bosnian Podrinje Canton"
+    "name": "Bosansko-podrinjski kanton"
   },
   {
     "id": 6,
-    "name": "Central Bosnia Canton"
+    "name": "Srednjobosanski kanton"
   },
   {
     "id": 7,
-    "name": "Herzegovina-Neretva Canton"
+    "name": "Hercegovačko-neretvanski kanton"
   },
   {
     "id": 8,
-    "name": "West Herzegovina Canton"
+    "name": "Zapadnohercegovački kanton"
   },
   {
     "id": 9,
-    "name": "Sarajevo Canton"
+    "name": "Kanton Sarajevo"
   },
   {
     "id": 10,
-    "name": "Tuzla Canton"
+    "name": "Kaonton 10"
   }
 ]

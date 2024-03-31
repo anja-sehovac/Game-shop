@@ -1,158 +1,131 @@
-
-
 <section class="filters" style="padding-bottom: 0;">
-
-   <form action="" method="post">
+   <form id="search-form">
       <div id="close-filter"><i class="fas fa-times"></i></div>
-      <h3>filter your search</h3>
-
-         <div class="flex">
-            <div class="box">
-               <p>Animal type <span>*</span></p>
-               <select name="type" class="input" required>
-                  <option value="Dog">Dog</option>
-                  <option value="Cat">Cat</option>
-                  <option value="Bird">Bird</option>
-                  <option value="Hamster">Hamster</option>
-                  <option value="Other">Other</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>Location<span>*</span></p>
-               <select name="location" class="input" required>
-                  <option value="USK">Unsko-sanski kanton</option>
-                  <option value="PK">Posavski kanton</option>
-                  <option value="TK">Tuzlanski kanton</option>
-                  <option value="ZDK">ZeniČko-dobojski kanton</option>
-                  <option value="BPK">Bosansko-podrinjski kanton</option>
-                  <option value="SBK">Srednjobosanski kanton</option>
-                  <option value="HNK">Hercegovačko-neretvanski kanton</option>
-                  <option value="ZHK">Zapadnohercegovački kanton</option>
-                  <option value="KS">Kanton Sarajevo</option>
-                  <option value="K10">Kaonton 10</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>What age <span>*</span></p>
-               <input type="number" name="age" required maxlength="50" placeholder="max age in months" class="input">
-            </div>
-            <div class="box">
-               <p>Maximum budget <span>*</span></p>
-               <input type="number" name="budget" required maxlength="50" placeholder="max euro" class="input">
-            </div>
-
+      <h3>Filter your search</h3>
+      <div class="flex">
+         <div class="box">
+            <p>Animal type <span>*</span></p>
+            <select name="type" class="input" required>
+               <option value="1">Dog</option>
+               <option value="2">Cat</option>
+               <option value="3">Bird</option>
+               <option value="4">Hamster</option>
+               <option value="5">Other</option>
+            </select>
          </div>
-         <input type="submit" value="search property" name="search" class="btn">
+         <div class="box">
+            <p>Location<span>*</span></p>
+            <select name="location" class="input" required>
+               <option value="1">Unsko-sanski kanton</option>
+               <option value="2">Posavski kanton</option>
+               <option value="3">Tuzlanski kanton</option>
+               <option value="4">ZeniČko-dobojski kanton</option>
+               <option value="5">Bosansko-podrinjski kanton</option>
+               <option value="6">Srednjobosanski kanton</option>
+               <option value="7">Hercegovačko-neretvanski kanton</option>
+               <option value="8">Zapadnohercegovački kanton</option>
+               <option value="9">Kanton Sarajevo</option>
+               <option value="10">Kaonton 10</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>Maximum age (months) <span>*</span></p>
+            <input type="number" name="max_age" required maxlength="50" placeholder="max age in months" class="input">
+         </div>
+         <div class="box">
+            <p>Maximum budget <span>*</span></p>
+            <input type="number" name="max_budget" required maxlength="50" placeholder="max euro" class="input">
+         </div>
+      </div>
+      <input type="submit" value="Search Property" name="search" class="btn">
    </form>
-
 </section>
-
-<!-- search filter section ends -->
-
-<div id="filter-btn" class="fas fa-filter"></div>
-
-<!-- listings section starts  -->
 
 <section class="listings">
-
-   <h1 class="heading">searched results</h1>
-
-   <div class="box-container">
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>1</span></p>
-
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="Assets/images/bird1.jpg" alt="">
-         </div>
-         <h3 class="name">Tuco</h3>
-         <p class="location"><i class="fas fa-paw"></i><span>Budgerigar bird</span></p>
-         <div class="flex">
-            <p><i class="fas fa-calendar"></i><span>3</span></p>
-            <p><i class="fas fa-money-bill"></i><span>2000</span></p>
-            <p><i class="fas fa-location-dot"></i><span>TK</span></p>
-         </div>
-         <a href="#view_pet" class="btn">view pet</a>
-      </div>
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>1</span></p>
-
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="Assets/images/cat1.webp" alt="">
-         </div>
-         <h3 class="name">Meow</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>Burmese cat</span></p>
-         <div class="flex">
-            <p><i class="fas fa-calendar"></i><span>2</span></p>
-            <p><i class="fas fa-money-bill"></i><span>1500</span></p>
-            <p><i class="fas fa-location-dot"></i><span>KS</span></p>
-         </div>
-         <a href="#view_pet" class="btn">view pet</a>
-      </div>
-
-      <div class="box">
-         <div class="admin">
-            <h3>j</h3>
-            <div>
-               <p>john deo</p>
-               <span>10-11-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <p class="total-images"><i class="far fa-image"></i><span>1</span></p>
-
-            <form action="" method="post" class="save">
-               <button type="submit" name="save" class="far fa-heart"></button>
-            </form>
-            <img src="Assets/images/dog1.webp" alt="">
-         </div>
-         <h3 class="name">Buddy</h3>
-         <p class="location"><i class="fas fa-map-marker-alt"></i><span>Golden retriever dog</span></p>
-         <div class="flex">
-            <p><i class="fas fa-calendar"></i><span>5</span></p>
-            <p><i class="fas fa-money-bill"></i><span>3000</span></p>
-            <p><i class="fas fa-location-dot"></i><span>KS</span></p>
-         </div>
-         <a href="#view_pet" class="btn">view pet</a>
-      </div>
-
+   <h1 class="heading">Listings</h1>
+   <div class="box-container" id="box-container">
+      <!-- Listings will be dynamically added here -->
    </div>
-
-
 </section>
 
-
-
 <script>
+   // Fetch and display all listings when the page loads
+   window.addEventListener("load", function() {
+      fetchListings();
+   });
 
-document.querySelector('#filter-btn').onclick = () =>{
-   document.querySelector('.filters').classList.add('active');
-}
+   // Function to fetch listings
+   function fetchListings() {
+      fetch("http://localhost:63342/Game-shop/desgin/Assets/js/pets.json")
+              .then(response => response.json())
+              .then(data => displayListings(data))
+              .catch(error => console.error("Error fetching data:", error));
+   }
 
-document.querySelector('#close-filter').onclick = () =>{
-   document.querySelector('.filters').classList.remove('active');
-}
+   // Function to display listings
+   function displayListings(listings) {
+      const container = document.getElementById("box-container");
+      container.innerHTML = "";
 
+      listings.forEach(pet => {
+         const div = document.createElement("div");
+         div.classList.add("box");
+         div.innerHTML = `
+         <div class="admin">
+            <h3>${pet.owner}</h3>
+            <div>
+               <p>${pet.owner}</p>
+               <span>${pet.time_of_posting}</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <p class="total-images"><i class="far fa-image"></i><span>${pet.images.length}</span></p>
+            <form action="" method="post" class="save">
+               <button type="submit" name="save" class="far fa-heart"></button>
+            </form>
+            <img src="Assets/images/${pet.images[0]}" alt="">
+         </div>
+         <h3 class="name">${pet.name}</h3>
+         <p class="location"><i class="fas fa-paw"></i><span>${pet.type}</span></p>
+         <div class="flex">
+            <p><i class="fas fa-calendar"></i><span>${pet.age}</span></p>
+            <p><i class="fas fa-money-bill"></i><span>${pet.price}</span></p>
+            <p><i class="fas fa-location-dot"></i><span>${pet.location}</span></p>
+         </div>
+         <a href="#view_pet" class="btn">view pet</a>
+      `;
+         container.appendChild(div);
+      });
+   }
+
+   // Filter listings when the form is submitted
+   document.getElementById("search-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(event.target);
+      const maxAge = formData.get("max_age");
+      const maxBudget = formData.get("max_budget");
+      const location = formData.get("location");
+      const type = formData.get("type"); // Get selected animal type
+
+      fetch("http://localhost:63342/Game-shop/desgin/Assets/js/pets.json")
+              .then(response => response.json())
+              .then(data => {
+                 // Filter data based on selected filters
+                 const filteredData = data.filter(pet => {
+                    // Check if each pet matches the filter criteria
+                    return (
+                            pet.age <= maxAge &&
+                            pet.price <= maxBudget &&
+                            pet.location == location &&
+                            (type === "" || parseInt(type) === pet.type) // Include type filter
+                    );
+                 });
+                 displayListings(filteredData);
+              })
+              .catch(error => console.error("Error fetching data:", error));
+   });
 </script>
 
+</body>
+</html>

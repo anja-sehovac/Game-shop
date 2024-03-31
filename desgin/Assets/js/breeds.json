@@ -2,19 +2,23 @@
   "breeds": [
     {
       "id": 1,
-      "category": "cat"
+      "category": "Dog"
     },
     {
       "id": 2,
-      "category": "dog"
+      "category": "Cat"
     },
     {
       "id": 3,
-      "category": "bird"
+      "category": "Bird"
     },
     {
       "id": 4,
-      "category": "other",
+      "category": "Hamster"
+    },
+    {
+      "id": 5,
+      "category": "Other"
     }
   ]
 }

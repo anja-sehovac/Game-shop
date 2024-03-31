@@ -98,7 +98,10 @@ section{
    display: block;
    width: 100%;
 }
-
+.location { /* Adjust this value as needed */
+   max-height: 70px; /* Adjust this value as needed */
+   overflow: auto; /* Add scrollbars if content is too large */
+}
 
 .inline-btn{
    display: inline-block;
