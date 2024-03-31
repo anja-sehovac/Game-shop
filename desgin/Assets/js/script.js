@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     // Your code here
     window.onload = function() {
         var xhr = new XMLHttpRequest();
@@ -105,6 +105,6 @@ function displayListings(listings) {
         `;
         container.innerHTML += html;
     }}
-*/
+
 
 

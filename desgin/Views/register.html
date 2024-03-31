@@ -17,3 +17,35 @@
 
 </section>
 
+<script>
+   $(document).ready(function() {
+      $('form').submit(function(event) {
+         event.preventDefault(); // Prevent form submission
+
+         // Get form data
+         var name = $('input[name="name"]').val().trim();
+         var email = $('input[name="email"]').val().trim();
+         var password = $('input[name="pass"]').val().trim();
+         var confirmPassword = $('input[name="c_pass"]').val().trim();
+
+         // Check if all required fields are populated
+         if (name !== '' && email !== '' && password !== '' && confirmPassword !== '') {
+            // Check if passwords match
+            if (password === confirmPassword) {
+               // Print form data to console
+               var formData = {
+                  name: name,
+                  email: email,
+                  password: password
+               };
+               console.log(formData);
+            } else {
+               alert('Passwords do not match. Please re-enter your password.');
+            }
+         } else {
+            alert('Please populate all required fields before submitting.');
+         }
+      });
+   });
+</script>
+
