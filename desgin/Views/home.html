@@ -213,7 +213,11 @@
                   viewBtn.classList.add('btn');
                   viewBtn.textContent = 'View Pet';
                   box.appendChild(viewBtn);
-
+                  viewBtn.addEventListener('click', function() {
+                     localStorage.setItem('viewPetId', pet.id.toString());
+                     // Optionally, navigate to the pet detail page if it's a different HTML file
+                     // window.location.href = 'path_to_pet_detail_page.html';
+                  });
                   boxContainerHome.appendChild(box);
                }
             });

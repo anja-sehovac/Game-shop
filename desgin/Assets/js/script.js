@@ -1,4 +1,4 @@
-/*function loadJSON(url, callback) {
+function loadJSON(url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.overrideMimeType("application/json");
     xhr.open('GET', url, true);
@@ -86,4 +86,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-*/

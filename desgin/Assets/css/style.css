@@ -49,9 +49,6 @@ body{
    background-color: var(--light-bg);
 
 
-
-
-}
 h4{
    font-size: medium;
    color: #6a0d0f;
@@ -1163,13 +1160,15 @@ p.type {
 
 
 
+#register form{
+   margin-bottom: 100px;
+}
 
 .footer{
-   background-color: var(--black);
    margin-top: auto;
+   background-color: var(--black);
    width: 100%;
-   bottom: 0;
-   left: 0;
+
 }
 
 .footer .flex{
@@ -1398,7 +1397,11 @@ p.type {
    color: var(--main-color);
 }
 
-
+@media (max-width:700px) {
+   .filters form {
+      width: 20px;
+   }
+}
 
 
 @media (max-width:450px){
@@ -1455,5 +1458,5 @@ p.type {
 
 
 
-}
+}}
 
