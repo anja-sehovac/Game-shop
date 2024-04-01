@@ -1,3 +1,4 @@
+//All listings
 document.addEventListener("DOMContentLoaded", function() {
     // Fetch and display listings
     fetchAndDisplayListings();
@@ -102,6 +103,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
+//Home listings
 document.addEventListener("DOMContentLoaded", function () {
     fetchAndDisplayListings();
 });
@@ -298,3 +302,99 @@ function displayListings(listings) {
     });
 }
 
+
+
+
+
+//Saved
+    document.addEventListener("DOMContentLoaded", function() {
+    // Fetch and display listings
+    fetchAndDisplayListings();
+
+    // Function to fetch and display listings
+    function fetchAndDisplayListings() {
+    // Fetch saved IDs for the first user
+    fetchSavedIDs(function (savedIDs) {
+        console.log("Saved IDs:", savedIDs);
+    // Fetch pet listings
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+    var listings = JSON.parse(this.responseText);
+        console.log("All Listings:", listings);
+    // Filter listings based on saved IDs
+        var savedListings = savedIDs.map(function(savedID) {
+            return listings[savedID - 1]; // Adjust index since array positions start from 0 but savedID from 1
+        });
+    displayListings(savedListings);
+}
+};
+    xhr.open("GET", "http://localhost:63342/Game-shop/desgin/Assets/js/pets.json", true);
+    xhr.send();
+});
+}
+
+    // Function to fetch saved IDs for the first user
+    function fetchSavedIDs(callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+    var savedData = JSON.parse(this.responseText);
+    var savedIDs = [];
+    if (savedData.length > 0) {
+    savedIDs = savedData[0].savedID;
+}
+    callback(savedIDs);
+}
+};
+    xhr.open("GET", "http://localhost:63342/Game-shop/desgin/Assets/js/saved.json", true);
+    xhr.send();
+}
+
+    // Function to display listings
+    function displayListings(listings) {
+    var container = document.getElementById('box-container-x');
+    if (container === null) {
+    console.error("Element with ID 'box-container-x' not found.");
+    return;
+}
+    container.innerHTML = ''; // Clear existing content
+
+    // Loop through the listings
+    listings.forEach(function (listing) {
+    var html = `
+                    <div class="box">
+                        <div class="admin">
+                            <h3>${listing.owner}</h3>
+                            <div>
+                                <p>${listing.owner}</p>
+                                <span>${listing.time_of_posting}</span>
+                            </div>
+                        </div>
+                        <div class="thumb">
+                            <p class="total-images"><i class="far fa-image"></i><span>${listing.images.length}</span></p>
+                            <form action="" method="post" class="save">
+                                <button type="submit" name="save" class="far fa-heart"></button>
+                            </form>
+                            <img src="Assets/images/${listing.images[0]}" alt="">
+                        </div>
+                        <h3 class="name">${listing.name}</h3>
+                        <p class="type"><i class="fas fa-paw"></i><span>${listing.type}</span></p>
+                        <p class="location"><i class="fas fa-paw"></i><span>${listing.location}</span></p>
+                        <div class="flex">
+                            <p><i class="fas fa-calendar"></i><span>${listing.age}</span></p>
+                            <p><i class="fas fa-money-bill"></i><span>${listing.price}</span></p>
+                            <p><i class="fas fa-location-dot"></i><span>${listing.location}</span></p>
+                        </div>
+                        <a href="#view_pet" class="btn" onclick="showPetDetails(${JSON.stringify(listing)})">View Pet</a>
+                    </div>
+                `;
+    container.innerHTML += html;
+});
+}
+});
+
+    // Function to show pet details
+    function showPetDetails(pet) {
+    // Your existing showPetDetails function
+}
