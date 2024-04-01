@@ -36,13 +36,11 @@
 
             loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/users.json', function (ownersResponse) {
                var ownersData = JSON.parse(ownersResponse);
-               console.log("Owners Data:", ownersData);
 
                const boxContainerHome = document.getElementById('box-container');
 
                // Loop through all pets and create box elements
                petsData.forEach(function(pet) {
-                  console.log("Pet Owner ID:", pet.owner);
                   const box = document.createElement('div');
                   box.classList.add('box');
 
@@ -122,6 +120,12 @@
                   viewBtn.href = '#view_pet';
                   viewBtn.classList.add('btn');
                   viewBtn.textContent = 'View Pet';
+// Add event listener to store pet's ID and navigate to detail page
+                  viewBtn.addEventListener('click', function() {
+                     localStorage.setItem('viewPetId', pet.id.toString());
+                     // Optionally, navigate to the pet detail page if it's a different HTML file
+                     // window.location.href = 'path_to_pet_detail_page.html';
+                  });
                   box.appendChild(viewBtn);
 
                   boxContainerHome.appendChild(box);

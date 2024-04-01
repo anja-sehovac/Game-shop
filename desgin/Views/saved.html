@@ -38,11 +38,12 @@
                     console.log("Owners Data:", ownersData);
 
                     const boxContainerHome = document.getElementById('box-container');
+                    const userId = localStorage.getItem('userId');
+                    console.log(userId);
 
                     // Loop through all pets and create box elements
                     petsData.forEach(function(pet) {
-                        if (pet.owner === 2) { // Check if owner is 1
-                            console.log("Pet Owner ID:", pet.owner);
+                        if (parseInt(pet.owner) === parseInt(userId)) { // Check if owner is 1
                             const box = document.createElement('div');
                             box.classList.add('box');
 

@@ -1,37 +1,41 @@
 
-<!-- view property section starts  -->
-
 <section class="view-pet">
+
    <div class="details">
       <div class="thumb">
          <div class="big-image">
-            <img src="" alt="Big Image">
+            <img src="" alt="" id="big-image">
          </div>
-         <div class="small-images">
-            <!-- Small images will be populated dynamically based on the selected pet -->
+         <div class="small-images" id="small-images">
+            <!-- Small images will be inserted here -->
          </div>
       </div>
-      <h3 class="name"></h3>
-      <p class="location"><i class="fas fa-shield-dog"></i><span></span></p>
-      <div class="info">
-         <p><i class="fas fa-calendar"></i><span></span></p>
-         <p><i class="fas fa-money-bill"></i><span></span></p>
-         <p><i class="fas fa-location-dot"></i><span></span></p>
-         <p><i class="fas fa-user"></i><span></span></p>
-         <p><i class="fas fa-phone"></i><a href=""></a></p>
-         <p><i class="fas fa-calendar"></i><span></span></p>
+      <h3 class="name" id="pet-name">Loading...</h3>
+      <p class="location"><i class="fas fa-shield-dog"></i><span id="pet-location">Loading...</span></p>
+      <div class="info" id="pet-info">
+         <!-- Pet info will be inserted here -->
       </div>
       <h3 class="title">Details</h3>
       <div class="flex">
-         <div class="box">
-            <!-- Pet details will be populated dynamically based on the selected pet -->
+         <div class="box" id="pet-details-1">
+            <!-- First half of the pet details will be inserted here -->
+         </div>
+         <div class="box" id="pet-details-2">
+            <!-- Second half of the pet details will be inserted here -->
          </div>
       </div>
+
       <h3 class="title">Description</h3>
-      <p class="description"></p>
+      <p class="description" id="pet-description">Loading...</p>
       <form action="" method="post">
-         <input type="submit" value="Save Pet" name="save" class="inline-btn">
+         <input type="submit" value="save pet" name="save" class="inline-btn">
       </form>
    </div>
+
 </section>
+
+
+<script>
+
+</script>
 

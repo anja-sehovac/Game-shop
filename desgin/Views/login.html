@@ -18,23 +18,65 @@
 
 
 <script>
-   $(document).ready(function() {
-      $.getJSON("http://localhost:63342/Game-shop/desgin/Assets/js/users.json", function(users) {
-         $("#login-form").submit(function(event) {
-            event.preventDefault();
-            var email = $("input[name='email']").val();
-            var password = $("input[name='password']").val();
-            var authenticatedUser = users.find(function(user) {
-               return user.email === email && user.password === password;
-            });
-            if (authenticatedUser) {
-               // Redirect to home
-               window.location.href = "#home";
-            } else {
-               // Display login unsuccessful message
-               alert('Log-in failed. Please try again.');
+      $(document).ready(function() {
+      // Initialize jQuery Validation plugin
+      $('#login-form').validate({
+         rules: {
+            email: {
+               required: true,
+               email: true
+            },
+            password: {
+               required: true,
+               minlength: 3
             }
-         });
+         },
+         messages: {
+            email: {
+               required: 'Please enter your email',
+               email: 'Please enter a valid email address'
+            },
+            password: {
+               required: 'Please enter your password',
+               minlength: 'Password must be at least 8 characters long'
+            }
+         },
+         submitHandler: function (form) {
+            var enteredEmail = $('input[name="email"]').val().trim();
+            var enteredPassword = $('input[name="password"]').val().trim();
+
+            // Use jQuery AJAX to fetch JSON data from the file
+            $.ajax({
+               url: 'http://localhost:63342/Game-shop/desgin/Assets/js/users.json', // Update the URL with your JSON file path
+               dataType: 'json',
+               success: function (data) {
+                  var found = false; // Flag to track if a matching user is found
+                  // Iterate over each item in the JSON array
+                  $.each(data, function (index, item) {
+                     // Check if the current item's email and password match the entered credentials
+                     if (item.email === enteredEmail && item.password === enteredPassword) {
+                        // Store user data in local storage
+                        localStorage.setItem('userId', item.id);
+                        // Redirect to the profile page
+                        window.location.href = '#home';
+                        found = true; // Set the flag to true since a matching user is found
+                        return false; // Exit the loop since we found a matching user
+                     }
+                  });
+
+                  // If no matching user is found, display an error message
+                  if (!found) {
+                     console.log("no such user in json file.");
+                  }
+               },
+               error: function (xhr, status, error) {
+                  console.error('Error loading JSON data:', error);
+               }
+            });
+
+            // Reset the form
+            form.reset();
+         }
       });
    });
 
