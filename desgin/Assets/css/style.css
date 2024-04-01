@@ -102,6 +102,9 @@ section{
    max-height: 70px; /* Adjust this value as needed */
    overflow: auto; /* Add scrollbars if content is too large */
 }
+p.type {
+   font-size: medium;
+}
 
 .inline-btn{
    display: inline-block;
