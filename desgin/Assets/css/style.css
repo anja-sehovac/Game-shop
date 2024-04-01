@@ -52,8 +52,13 @@ body{
 
 
 }
-
-
+h4{
+   font-size: medium;
+   color: #6a0d0f;
+}
+h5{
+   font-size: medium;
+}
 section{
    padding: 3rem 2rem;
    max-width: 1200px;

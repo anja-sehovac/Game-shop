@@ -1,11 +1,12 @@
 [
   {
+    "id": 1,
     "name": "Buddy",
     "type": 1,
     "age": 2,
     "price": 100,
     "location": 3,
-    "owner": 101,
+    "owner": 1,
     "time_of_posting": "2024-03-30T12:00:00Z",
     "vaccination": "Done",
     "documents": "Available",
@@ -15,12 +16,13 @@
     "images": ["dog1.webp", "bird1.jpg"]
   },
   {
+    "id": 2,
     "name": "Whiskers",
     "type": 2,
     "age": 4,
     "price": 50,
     "location": 3,
-    "owner": 102,
+    "owner": 2,
     "time_of_posting": "2024-03-30T13:30:00Z",
     "vaccination": "Done",
     "documents": "Available",
@@ -30,12 +32,13 @@
     "images": ["cat1.webp"]
   },
   {
+    "id": 3,
     "name": "Max",
     "type": 1,
     "age": 3,
     "price": 120,
     "location": 5,
-    "owner": 103,
+    "owner": 3,
     "time_of_posting": "2024-03-30T14:45:00Z",
     "vaccination": "Not Done",
     "documents": "Unavailable",
@@ -45,12 +48,13 @@
     "images": ["collie.jpg"]
   },
   {
+    "id": 4,
     "name": "Felix",
     "type": 2,
     "age": 5,
     "price": 40,
     "location": 2,
-    "owner": 104,
+    "owner": 2,
     "time_of_posting": "2024-03-30T16:00:00Z",
     "vaccination": "Done",
     "documents": "Available",
@@ -60,12 +64,13 @@
     "images": ["francis1.jpg"]
   },
   {
+    "id": 5,
     "name": "Gizmo",
     "type": 5,
     "age": 5,
     "price": 80,
     "location": 9,
-    "owner": 110,
+    "owner": 3,
     "time_of_posting": "2024-03-30T23:30:00Z",
     "vaccination": "Done",
     "documents": "Available",
