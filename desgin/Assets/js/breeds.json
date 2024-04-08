@@ -1,0 +1,24 @@
+{
+  "breeds": [
+    {
+      "id": 1,
+      "category": "Dog"
+    },
+    {
+      "id": 2,
+      "category": "Cat"
+    },
+    {
+      "id": 3,
+      "category": "Bird"
+    },
+    {
+      "id": 4,
+      "category": "Hamster"
+    },
+    {
+      "id": 5,
+      "category": "Other"
+    }
+  ]
+}

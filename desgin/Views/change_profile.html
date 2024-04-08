@@ -1,0 +1,82 @@
+<section class="profilechange">
+
+   <h1 class="heading">change profile</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+
+      <h3>Name</h3>
+      <input type="text" name="name" required maxlength="50" placeholder="Name" class="input">
+      <a href=#  class="btn">update name</a>
+      </div>
+
+      <div class="box">
+
+         <h3>Number</h3>
+         <input type="text" name="number" required maxlength="50" placeholder="Number" class="input">
+         <a href=# class="btn">update number</a>
+      </div>
+
+      <div class="box">
+
+         <h3>E-mail</h3>
+         <input type="email" name="email" required maxlength="50" placeholder="E-mail" class="input">
+         <a href=# class="btn">update email</a>
+      </div>
+
+      <div class="image">
+         <img src="Assets/images/cat.svg" alt="">
+      </div>
+
+
+
+
+
+
+   </div>
+
+</section>
+
+<script>
+   $(document).ready(function() {
+      $('.box-container .box a.btn').click(function(event) {
+         event.preventDefault(); // Prevent default link behavior
+
+         // Get form data
+         var name = $(this).siblings('input[name="name"]').val();
+         var number = $(this).siblings('input[name="number"]').val();
+         var email = $(this).siblings('input[name="email"]').val();
+
+         // Check which button was clicked and print the corresponding field to console
+         if ($(this).text().includes('name')) {
+            if (name.trim() !== '') {
+               console.log("Name: " + name.trim());
+            } else {
+               alert('Please enter a name to update.');
+            }
+         } else if ($(this).text().includes('number')) {
+            if (number.trim() !== '') {
+               console.log("Number: " + number.trim());
+            } else {
+               alert('Please enter a number to update.');
+            }
+         } else if ($(this).text().includes('email')) {
+            if (email.trim() !== '') {
+               console.log("Email: " + email.trim());
+            } else {
+               alert('Please enter an email to update.');
+            }
+         }
+      });
+   });
+</script>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawsome</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+
+    <link rel="stylesheet" href="Assets/css/spapp.css">
+
+
+    <script src="Assets/js/jquery-3.7.1.js"></script>
+    <script src="Assets/js/jquery.validate.min.js"></script>
+    <script src="Assets/js/jquery.spapp.js"></script>
+    <script src="Assets/js/script.js"></script>
+
+
+
+
+</head>
+
+
+<!-- header section starts  -->
+<body>
+<header class="header">
+
+    <nav class="navbar nav-1">
+        <section class="flex">
+            <a href="#home" class="logo"><i class="fas fa-paw"></i>Home</a>
+
+            <ul>
+                <li><a href="#post_pet">Post pet<i class="fas fa-dog"></i></a></li>
+            </ul>
+        </section>
+    </nav>
+
+    <nav class="navbar nav-2">
+        <section class="flex">
+            <div id="menu-btn" class="fas fa-bars"></div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="#listings">Buy<i class=""></i></a>
+
+                    </li>
+                    <li><a href="#post_pet">Sell<i class="fas fa-angle-down"></i></a>
+                        <ul>
+                            <li><a href="#post_pet">Post pet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about">Help<i class="fas fa-angle-down"></i></a>
+                        <ul>
+                            <li><a href="#about">About Us</a></i></li>
+                            <li><a href="#contact">Contact Us</a></i></li>
+                            <li><a href="#contact">FAQ</a></i></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <ul>
+                <li><a href="#saved">Saved <i class="far fa-heart"></i></a></li>
+                <li><a href="#">Account <i class="fas fa-angle-down"></i></a>
+                    <ul>
+                        <li><a href="#login">Log-in</a></li>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#change_profile">Edit Profile</a></li>
+                        <li><a href="#my_listings">My Listings</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </nav>
+
+</header>
+
+
+    <main id="spapp" role="main">
+        <section id="about" data-load="about.html">
+            <h1>About</h1>
+        </section>
+
+        <section id="change_profile" data-load="change_profile.html">
+            <h1>Change Profile</h1>
+        </section>
+
+        <section id="contact" data-load="contact.html">
+            <h1>Contact</h1>
+        </section>
+
+        <section id="home" data-load="home.html">
+            <h1>Home</h1>
+        </section>
+
+        <section id="listings" data-load="listings.html">
+            <h1>Listings</h1>
+        </section>
+
+        <section id="login" data-load="login.html">
+        <h1>Log-in</h1>
+        </section>
+
+        <section id="my_listings" data-load="my_listings.html">
+            <h1>My Listings</h1>
+        </section>
+
+        <section id="post_pet" data-load="post-pet.html">
+            <h1>Post Pet</h1>
+        </section>
+
+        <section id="register" data-load="register.html">
+            <h1>Register</h1>
+        </section>
+
+        <section id="saved" data-load="saved.html">
+            <h1>Saved</h1>
+        </section>
+
+        <section id="search" data-load="search.html">
+            <h1>Search</h1>
+        </section>
+
+        <section id="update_pet" data-load="update_pet.html">
+            <h1>Update Pet</h1>
+        </section>
+
+        <section id="view_pet" data-load="view_pet.html">
+            <h1>View Pet</h1>
+        </section>
+
+    </main>
+
+<footer class="footer">
+
+    <section class="flex">
+
+        <div class="box">
+            <a href="tel:1234567890"><i class="fas fa-phone"></i><span>123456789</span></a>
+            <a href="tel:1112223333"><i class="fas fa-phone"></i><span>1112223333</span></a>
+            <a href="anja.sehovac@stu.ibu.edu.ba"><i class="fas fa-envelope"></i><span>anja.sehovac@stu.ibu.edu.ba</span></a>
+            <a href="https://maps.app.goo.gl/1j336EPYaRxM3Qws8"><i class="fas fa-map-marker-alt"></i><span>Sarajevo, BH</span></a>
+        </div>
+
+    </section>
+</footer>
+
+<!-- footer section ends -->
+
+<script>
+    var app = $.spapp({
+        defaultView: "#home",
+        templateDir: "./Views/"
+
+    });
+
+
+    app.run();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+<section class="contact">
+   <div class="row">
+      <div class="image">
+         <img src="Assets/images/contat.svg" alt="">
+      </div>
+      <form id="contactForm">
+         <h3>get in touch</h3>
+         <input type="text" name="name" required maxlength="50" placeholder="enter your name" class="box">
+         <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
+         <input type="number" name="number" required maxlength="10" max="9999999999" min="0" placeholder="enter your number" class="box">
+         <textarea name="message" placeholder="enter your message" required maxlength="1000" cols="30" rows="10" class="box"></textarea>
+         <input type="submit" value="send message" class="btn">
+      </form>
+   </div>
+</section>
+
+<!-- contact section ends -->
+
+<!-- faq section starts  -->
+
+<section class="faq" id="faq">
+
+   <h1 class="heading">FAQ</h1>
+
+   <div class="box-container">
+
+      <div class="box active">
+         <h3><span>Q: How do I adopt a pet from your site?</span><i class="fas fa-angle-down"></i></h3>
+         <p>A: Browse available pets online, fill out an application, and connect with our adoption team to schedule a meet-and-greet.</p>
+      </div>
+
+      <div class="box active">
+         <h3><span>Q: Are the pets on your site vaccinated and spayed/neutered?</span><i class="fas fa-angle-down"></i></h3>
+         <p>A: Yes, all pets available for adoption are up-to-date on vaccinations and spayed/neutered.</p>
+      </div>
+
+      <div class="box">
+         <h3>Q: What if the pet I adopt doesn't fit well with my family?<span></span><i class="fas fa-angle-down"></i></h3>
+         <p>A: We offer a trial period to ensure compatibility, and if it doesn't work out, we'll help you find another suitable match.</p>
+      </div>
+
+      <div class="box">
+         <h3>Q: Can I adopt if I live outside your area?<span></span><i class="fas fa-angle-down"></i></h3>
+         <p>A: Adoption policies vary, but we strive to accommodate potential adopters regardless of location, with some limitations.</p>
+      </div>
+
+      <div class="box">
+         <h3>Q: Are there any adoption fees?<span></span><i class="fas fa-angle-down"></i></h3>
+         <p>A: Yes, adoption fees help cover medical expenses and care for our pets, varying based on factors such as age and species.</p>
+      </div>
+
+      <div class="box">
+         <h3>Q: Can I visit the pets in person before deciding?<span></span><i class="fas fa-angle-down"></i></h3>
+         <p>A: Absolutely! We encourage potential adopters to visit our shelter or attend adoption events to meet pets in person before making a decision.</p>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- faq section ends -->
+
+
+<script>
+   $(document).ready(function() {
+      $('#contactForm').submit(function(event) {
+         event.preventDefault(); // Prevent form submission
+
+         // Get form data
+         var name = $('input[name="name"]').val().trim();
+         var email = $('input[name="email"]').val().trim();
+         var number = $('input[name="number"]').val().trim();
+         var message = $('textarea[name="message"]').val().trim();
+
+         // Check if all required fields are populated
+         if (name !== '' && email !== '' && number !== '' && message !== '') {
+            // Print form data to console
+            var formData = {
+               name: name,
+               email: email,
+               number: number,
+               message: message
+            };
+            console.log(formData);
+
+
+         } else {
+            alert('Please populate all required fields before submitting.');
+         }
+      });
+   });
+</script>
+
+<script>
+   document.querySelectorAll('.faq .box-container .box h3').forEach(headings =>{
+   headings.onclick = () =>{
+      headings.parentElement.classList.toggle('active');
+   }
+})</script>
+
+
+
+

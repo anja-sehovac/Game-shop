@@ -1,0 +1,79 @@
+
+
+<section class="form-container">
+
+    <form action="" method="post">
+        <h3>create a listing!</h3>
+        <input type="text" name="name" required maxlength="50" placeholder="Enter pet's name" class="box">
+        <input type="number" name="age" required maxlength="50" placeholder="Enter pet's age" class="box">
+        <select name="location" class="input" required>
+            <option value="1">Unsko-sanski kanton</option>
+            <option value="2">Posavski kanton</option>
+            <option value="3">Tuzlanski kanton</option>
+            <option value="4">ZeniČko-dobojski kanton</option>
+            <option value="5">Bosansko-podrinjski kanton</option>
+            <option value="6">Srednjobosanski kanton</option>
+            <option value="7">Hercegovačko-neretvanski kanton</option>
+            <option value="8">Zapadnohercegovački kanton</option>
+            <option value="9">Kanton Sarajevo</option>
+            <option value="10">Kaonton 10</option>
+        </select>
+        <select name="type" class="input" required>
+            <option value="1">Dog</option>
+            <option value="2">Cat</option>
+            <option value="3">Bird</option>
+            <option value="4">Hamster</option>
+            <option value="5">Other</option>
+        </select>
+        <input type="text" name="description" required maxlength="20" placeholder="Description" class="box">
+        <div class="box">
+            <input type="file" name="image_01" class="input" accept="image/*" required>
+        </div>
+        <input type="submit" value="Post listing" name="submit" class="btn">
+
+    </form>
+
+</section>
+
+<script>
+    $(document).ready(function() {
+        $('form').submit(function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form data
+            var name = $('input[name="name"]').val().trim();
+            var age = $('input[name="age"]').val().trim();
+            var location = $('select[name="location"]').val().trim();
+            var type = $('select[name="type"]').val().trim();
+            var description = $('input[name="description"]').val().trim();
+
+            // Check if all required fields are populated
+            if (name !== '' && age !== '' && location !== '' && type !== '' && description !== '') {
+                // Print form data to console
+                var formData = {
+                    name: name,
+                    age: age,
+                    location: location,
+                    type: type,
+                    description: description
+                };
+                console.log(formData);
+            } else {
+                alert('Please populate all required fields before submitting.');
+            }
+        });
+    });
+</script>
+
+
+
+<!-- register section ends -->
+
+
+
+
+
+
+
+
+
