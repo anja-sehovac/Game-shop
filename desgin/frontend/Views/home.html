@@ -8,41 +8,8 @@
       <form action="#search" method="post">
          <h3>find your perfect companion</h3>
          <div class="flex">
-            <div class="box">
-               <p>Animal type <span>*</span></p>
-               <select name="type" class="input" required>
-                  <option value="Dog">Dog</option>
-                  <option value="Cat">Cat</option>
-                  <option value="Bird">Bird</option>
-                  <option value="Hamster">Hamster</option>
-                  <option value="Other">Other</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>Location<span>*</span></p>
-               <select name="location" class="input" required>
-                  <option value="USK">Unsko-sanski kanton</option>
-                  <option value="PK">Posavski kanton</option>
-                  <option value="TK">Tuzlanski kanton</option>
-                  <option value="ZDK">ZeniČko-dobojski kanton</option>
-                  <option value="BPK">Bosansko-podrinjski kanton</option>
-                  <option value="SBK">Srednjobosanski kanton</option>
-                  <option value="HNK">Hercegovačko-neretvanski kanton</option>
-                  <option value="ZHK">Zapadnohercegovački kanton</option>
-                  <option value="KS">Kanton Sarajevo</option>
-                  <option value="K10">Kaonton 10</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>What age <span>*</span></p>
-               <input type="number" name="age" required maxlength="50" placeholder="max age in months" class="input">
-            </div>
-            <div class="box">
-               <p>Maximum budget <span>*</span></p>
-               <input type="number" name="budget" required maxlength="50" placeholder="max euro" class="input">
-            </div>
-         </div>
-         <input type="submit" value="search property" name="search" class="btn">
+
+         <input type="submit" value="Search for your pet!" name="search" class="btn">
       </form>
 
    </section>
@@ -113,16 +80,16 @@
    }
 
    // Usage
-   loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/pets.json', function (response) {
+   loadJSON('http://localhost:63342/Game-shop/desgin/frontend/Assets/js/pets.json', function (response) {
       var petsData = JSON.parse(response);
 
-      loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/breeds.json', function (breedResponse) {
+      loadJSON('http://localhost:63342/Game-shop/desgin/frontend/Assets/js/breeds.json', function (breedResponse) {
          var breedsData = JSON.parse(breedResponse);
 
-         loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/caontons.json', function (cantonsResponse) {
+         loadJSON('http://localhost:63342/Game-shop/desgin/frontend/Assets/js/caontons.json', function (cantonsResponse) {
             var cantonsData = JSON.parse(cantonsResponse);
 
-            loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/users.json', function (ownersResponse) {
+            loadJSON('http://localhost:63342/Game-shop/desgin/frontend/Assets/js/users.json', function (ownersResponse) {
                var ownersData = JSON.parse(ownersResponse);
                console.log("Owners Data:", ownersData);
 

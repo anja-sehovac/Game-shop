@@ -48,8 +48,77 @@ html{
 body{
    background-color: var(--light-bg);
 
+   .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      width: 70%; /* Set a wider width for the modal */
+      max-width: 600px; /* Optionally, set a maximum width for the modal */
+      /* Add other styles as needed */
+      /* Add styles to make the modal scrollable */
+      max-height: 80%; /* Set a maximum height for the modal */
+      overflow-y: auto; /* Allow vertical scrolling if content exceeds max-height */
+      padding: 20px; /* Add padding to the modal content */
+      background-color: white; /* Add a background color */
+      border: 1px solid #ccc; /* Add a border */
+      border-radius: 10px; /* Add border-radius for rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+   }
 
-h4{
+   .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+   }
+
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+   }
+   #edit_pet_modal label {
+      display: block;
+      margin-bottom: 8px;
+   }
+
+   /* Inputs inside edit_pet_modal */
+   #edit_pet_modal input[type="text"],
+   #edit_pet_modal input[type="number"],
+
+   .modal select,
+   .modal textarea {
+      font-size: large;
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+   }
+   .modal-content label {
+      font-size: 1.7rem; /* Adjust the font size as needed */
+   }
+
+   .modal textarea {
+      resize: vertical; /* Allow vertical resizing of textarea */
+   }
+
+   h4{
    font-size: medium;
    color: #6a0d0f;
 }

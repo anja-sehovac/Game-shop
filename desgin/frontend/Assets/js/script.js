@@ -1,4 +1,4 @@
-function loadJSON(url, callback) {
+/*function loadJSON(url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.overrideMimeType("application/json");
     xhr.open('GET', url, true);
@@ -77,12 +77,15 @@ function populatePetDetails(petsData) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/pets.json', function(response) {
-        var petsData = JSON.parse(response);
-        console.log(petsData);
-        populatePetDetails(petsData);
+setTimeout(() => {
+    document.addEventListener('DOMContentLoaded', function() {
+        loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/pets.json', function(response) {
+            var petsData = JSON.parse(response);
+            console.log(petsData);
+            populatePetDetails(petsData);
+        });
     });
-});
 
+}, 5000);
 
+*/
