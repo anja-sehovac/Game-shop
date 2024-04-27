@@ -69,8 +69,7 @@
             // Convert user data object to JSON string
             var jsonData = JSON.stringify(userData);
 
-            // Store JSON data in local storage
-            localStorage.setItem('userData', jsonData);
+            console.log(jsonData);
 
             // Redirect to the profile page
             window.location.href = '#home';
@@ -81,5 +80,4 @@
       });
    });
 </script>
-
 

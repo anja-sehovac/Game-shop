@@ -1,6 +1,6 @@
 <section class="listings">
     <h1 class="heading">Latest Listings</h1>
-    <div class="box-container" id="box-container">
+    <div class="box-container" id="box-container-home">
         <!-- Boxes will be dynamically loaded here -->
     </div>
     <div style="margin-top: 2rem; text-align:center;">
@@ -23,27 +23,28 @@
         xhr.send(null);
     }
 
+    setTimeout(() => {
+
     // Usage
-    loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/pets.json', function (response) {
+    loadJSON('http://localhost:63342/Game-shop/desgin/frontend/Assets/js/pets.json', function (response) {
         var petsData = JSON.parse(response);
 
-        loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/breeds.json', function (breedResponse) {
+        loadJSON('http://localhost:63342/Game-shop/desgin/frontend/Assets/js/breeds.json', function (breedResponse) {
             var breedsData = JSON.parse(breedResponse);
 
-            loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/caontons.json', function (cantonsResponse) {
+            loadJSON('http://localhost:63342/Game-shop/desgin/frontend/Assets/js/caontons.json', function (cantonsResponse) {
                 var cantonsData = JSON.parse(cantonsResponse);
 
-                loadJSON('http://localhost:63342/Game-shop/desgin/Assets/js/users.json', function (ownersResponse) {
+                loadJSON('http://localhost:63342/Game-shop/desgin/frontend/Assets/js/users.json', function (ownersResponse) {
                     var ownersData = JSON.parse(ownersResponse);
-                    console.log("Owners Data:", ownersData);
 
-                    const boxContainerHome = document.getElementById('box-container');
+
+                    const boxContainerHome = document.getElementById('box-container-home');
                     const userId = localStorage.getItem('userId');
-                    console.log(userId);
-
-                    // Loop through all pets and create box elements
+                    // Loop through the first three pets and create box elements
                     petsData.forEach(function(pet) {
-                        if (parseInt(pet.owner) === parseInt(userId)) { // Check if owner is 1
+                        if (pet.owner == parseInt(userId)){
+
                             const box = document.createElement('div');
                             box.classList.add('box');
 
@@ -61,9 +62,11 @@
                                 const ownerName = document.createElement('h5');
                                 ownerName.textContent = owner.name;
                                 admin.appendChild(ownerName);
-                            } else {
+                            }
+                            else{
                                 console.log('Owner not found');
                             }
+
 
                             box.appendChild(admin);
 
@@ -118,19 +121,44 @@
 
                             box.appendChild(detailsFlex);
 
+                            const editBtn = document.createElement('a');
+                            editBtn.href = '#view_pet';
+                            editBtn.classList.add('btn');
+                            editBtn.textContent = 'Edit';
+                            box.appendChild(editBtn);
+                            editBtn.addEventListener('click', function() {
+                                localStorage.setItem('viewPetId', pet.id.toString());
+                                // Optionally, navigate to the pet detail page if it's a different HTML file
+                                // window.location.href = 'path_to_pet_detail_page.html';
+                            });
+
+                            const deleteBtn = document.createElement('a');
+                            deleteBtn.href = '';
+                            deleteBtn.classList.add('btn');
+                            deleteBtn.textContent = 'Delete';
+                            box.appendChild(deleteBtn);
+
                             const viewBtn = document.createElement('a');
                             viewBtn.href = '#view_pet';
                             viewBtn.classList.add('btn');
                             viewBtn.textContent = 'View Pet';
                             box.appendChild(viewBtn);
-
+                            viewBtn.addEventListener('click', function() {
+                                localStorage.setItem('viewPetId', pet.id.toString());
+                                // Optionally, navigate to the pet detail page if it's a different HTML file
+                                // window.location.href = 'path_to_pet_detail_page.html';
+                            });
                             boxContainerHome.appendChild(box);
+                            console.log("My Listings Loaded1");
                         }
+                        console.log("My Listings Loaded2");
                     });
+
                 });
             });
         });
     });
+
+    }, 100);
+
 </script>
-</body>
-</html>
